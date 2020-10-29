@@ -1,0 +1,32 @@
+.page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fdfdfd;
+
+  &-not-found {
+    text-align: center;
+
+    h2 {
+      position: relative;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #333333;
+    }
+
+    h1 {
+      font-size: 100px;
+      font-weight: 900;
+      margin: 0px;
+      text-transform: uppercase;
+      color: #666666;
+
+      span {
+        text-shadow: -8px 0px 0px#f2f2f2;
+      }
+    }
+  }
+}
