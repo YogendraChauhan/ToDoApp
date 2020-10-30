@@ -17,6 +17,7 @@ import { SideDrawerComponent } from './components/side-drawer/side-drawer.compon
 import { RouterModule } from '@angular/router';
 import { CardModule } from './shared/modules/card/card.module';
 import { SmartChartsModule } from './shared/modules/charts/smart-charts.module';
+import { ViewportComponent } from './components/app-viewport/viewport.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SmartChartsModule } from './shared/modules/charts/smart-charts.module';
     DashboardComponent,
     PageNotFoundComponent,
     NavbarComponent,
-    SideDrawerComponent
+    SideDrawerComponent,
+    ViewportComponent
   ],
   imports: [
     BrowserModule,
