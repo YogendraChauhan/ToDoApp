@@ -1,0 +1,22 @@
+<div class="side-drawer">
+  <div class="side-drawer-brand">
+    <img src="../../../assets/images/brand-logo.png" alt="Brand Logo" />
+  </div>
+  <ul class="side-drawer-menu">
+    <li>
+      <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/']">Dashboard</a>
+    </li>
+    <li>
+      <a routerLinkActive="active" [routerLink]="['/reports']">Reports</a>
+      <ul class="side-drawer-menu nested">
+        <li><a routerLinkActive="active" [routerLink]="['/reports/message-sent']">Message
+            Sent</a></li>
+        <li><a routerLinkActive="active" [routerLink]="['/reports/menu-clicks']">Menu
+            Clicks</a>
+        </li>
+        <li><a routerLinkActive="active" [routerLink]="['/reports/user-behaviour']">User
+            Behaviour</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,36 @@
+@import "../../../assets/scss/variables";
+.wrapper {
+  .menu {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: $menu-background-color;
+    overflow-x: hidden;
+    transition: 0.5s;
+    box-shadow: 0 0 5px 0 $menu-shadow-color;
+
+    &.collapsed {
+      width: 0;
+    }
+  }
+
+  .main-content {
+    transition: margin-left .5s;
+    margin-left: 250px;
+    height: $viewport-height;
+    overflow: hidden;
+    &.expand {
+      margin-left: 0;
+    }
+
+    .page-content {
+      padding: $gutter-space;
+      height: calc(#{$viewport-height} - #{$menu-height});
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  }
+}

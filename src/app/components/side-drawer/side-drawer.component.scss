@@ -1,0 +1,58 @@
+@import "../../../assets/scss/variables";
+
+.side-drawer {
+  padding: 10px;
+
+  &-brand {
+    margin-top: 10px;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  ul.side-drawer-menu {
+    margin: 0 0 0 -10px;
+    padding: 0;
+
+    li {
+      list-style-type: none;
+      margin: 5px 0;
+
+      a {
+        padding: 10px 8px 10px 30px;
+        text-decoration: none;
+        display: block;
+        color: lighten($color: #000000, $amount: 50%);
+        font-size: 16px;
+        transition: 0.3s;
+
+        &.active {
+          color: $menu-item-active-color;
+          background-color: $menu-item-active-bgcolor;
+          border-top-right-radius: 25px;
+          border-bottom-right-radius: 25px;
+        }
+
+        &:hover {
+          color: #444444;
+        }
+      }
+    }
+
+    &.nested {
+      margin: 0;
+      padding: 0;
+
+      li {
+        a {
+          &.active {
+            color: lighten($color: #000000, $amount: 25%);
+            background-color: transparent;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}

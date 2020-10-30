@@ -1,0 +1,10 @@
+@import "../../../../../../assets/scss/variables";
+.card {
+    min-height: 130px;
+    max-height: 130px;
+    overflow: auto;
+    margin-bottom: $gutter-space;
+    &--invalid {
+        color: $error;
+    }
+}

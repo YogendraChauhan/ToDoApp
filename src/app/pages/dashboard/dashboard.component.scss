@@ -1,0 +1,44 @@
+@import "../../../assets/scss/variables";
+.dashboard {
+  &-title {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+  }
+
+  &-subtitle {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .wrapper {
+    &-cards {
+      position: relative;
+      min-height: 144px;
+      margin-bottom: calc(#{$gutter-space} * 3);
+
+      .cards {
+        max-height: 144px;
+        overflow: hidden;
+        transition: all 1s;
+
+        &.expand {
+          max-height: fit-content;
+          overflow: visible;
+        }
+
+        &-actions {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+
+    &-charts {
+      position: relative;
+      min-height: 300px;
+      margin-bottom: calc(#{$gutter-space} * 2);
+    }
+  }
+}

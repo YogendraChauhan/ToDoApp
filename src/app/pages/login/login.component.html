@@ -1,1 +1,32 @@
-<p>login works!</p>
+<div class="page">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">Sign In</h5>
+            <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-signin">
+              <div class="form-label-group">
+                <input type="email" formControlName="email" id="inputEmail" class="form-control"
+                  placeholder="Email address" autocomplete="email"
+                  [class.is-invalid]="form.controls.email.invalid && (form.controls.email.dirty || form.controls.email.touched)">
+              </div>
+
+              <div class="form-label-group">
+                <input type="password" formControlName="password" id="inputPassword" class="form-control"
+                  placeholder="Password" autocomplete="current-password"
+                  [class.is-invalid]="form.controls.password.invalid && (form.controls.password.dirty || form.controls.password.touched)">
+              </div>
+
+              <button class="btn mt-4 btn-primary btn-block text-uppercase" type="submit"
+                [disabled]="form.invalid || loading">Sign
+                in</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <app-loader [loading]="loading" size="small" position="relative" backdropColor="transparent"></app-loader>
+</div>
