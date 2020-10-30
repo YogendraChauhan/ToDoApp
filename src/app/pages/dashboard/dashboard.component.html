@@ -11,7 +11,7 @@
   <div class="wrapper-cards">
     <ng-container *ngIf="userList.length && !loading">
       <div class="row cards" [class.expand]="showMoreCards" *ngIf="userList.length">
-        <div class="col-2 col-md-4 col-lg-3" *ngFor="let user of userList">
+        <div class="col-12 col-md-4 col-lg-3" *ngFor="let user of userList">
           <app-user-card [user]="user"></app-user-card>
         </div>
       </div>
