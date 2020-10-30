@@ -12,6 +12,10 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthGuard } from './shared/services/guards/auth.guard';
 import { AuthenticationService } from './shared/services/authentication.service';
 import { ApiInterceptor } from './shared/services/interceptors/api.interceptor';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { SideDrawerComponent } from './components/side-drawer/side-drawer.component';
+import { RouterModule } from '@angular/router';
+import { CardModule } from './shared/modules/card/card.module';
 
 @NgModule({
   declarations: [
@@ -19,14 +23,18 @@ import { ApiInterceptor } from './shared/services/interceptors/api.interceptor';
     LoginComponent,
     RegisterComponent,
     DashboardComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    NavbarComponent,
+    SideDrawerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     LoaderModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule,
+    CardModule
   ],
   providers: [
     AuthGuard,

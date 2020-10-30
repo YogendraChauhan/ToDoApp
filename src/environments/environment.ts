@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiBaseURL: 'https://reqres.in/api'
+  apiBaseURL: 'https://reqres.in/api',
+  mockApiBaseURL: 'https://jsonplaceholder.typicode.com'
 };
 
 /*

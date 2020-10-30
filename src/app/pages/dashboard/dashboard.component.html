@@ -1,1 +1,25 @@
-<p>dashboard works!</p>
+<div class="dashboard">
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <h1 class="dashboard-title">Enterprise Name</h1>
+      <h6 class="dashboard-subtitle text-muted">Dashboard</h6>
+    </div>
+    <div class="col-12 col-md-6">
+
+    </div>
+  </div>
+  <div class="wrapper">
+    <ng-container *ngIf="userList.length && !loading">
+      <div class="row cards" [class.expand]="showMoreCards" *ngIf="userList.length">
+        <div class="col-2 col-md-4 col-lg-3" *ngFor="let user of userList">
+          <app-user-card [user]="user"></app-user-card>
+        </div>
+      </div>
+      <div class="cards-actions">
+        <button type="button" class="btn btn-primary btn-sm btn-round"
+          (click)="toggleShowMoreCards()">{{showMoreCards ? 'Collapse' : 'Expand'}}</button>
+      </div>
+    </ng-container>
+    <app-loader [loading]="loading" size="small" position="absolute" backdropColor="#efefef"></app-loader>
+  </div>
+</div>

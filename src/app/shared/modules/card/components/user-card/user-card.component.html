@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="card-body">
+    <ng-container *ngIf="user">
+            <h5 class="card-title">{{user.name}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Company: {{user.company.name}}</h6>
+            <p class="card-text">{{user.company.catchPhrase}}</p>
+    </ng-container>
+    <ng-container *ngIf="!user">
+        <h5 class="card-title">Fetch Error</h5>
+        <p class="card-text card--invalid">No Record Found!</p>
+    </ng-container>
+  </div>
+</div>

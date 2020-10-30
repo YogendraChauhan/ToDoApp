@@ -1,0 +1,14 @@
+@import "../../../assets/scss/variables";
+.nav-bar {
+    padding: 0 $gutter-space;
+    border-bottom: 1px solid $menu-shadow-color;
+    height: $menu-height;
+    display: flex;
+    align-items: center;
+
+    &-icon {
+        font-size: 20px;
+        text-decoration: none;
+        color: lighten($color: #000000, $amount: 25%);
+    }
+}

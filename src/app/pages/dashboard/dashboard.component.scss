@@ -1,0 +1,33 @@
+.dashboard {
+  &-title {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+  }
+
+  &-subtitle {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .wrapper {
+    position: relative;
+    min-height: 144px;
+    .cards {
+      max-height: 144px;
+      overflow: hidden;
+      transition: all 1s;
+
+      &.expand {
+        max-height: fit-content;
+        overflow: visible;
+      }
+
+      &-actions {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
