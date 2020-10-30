@@ -16,6 +16,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SideDrawerComponent } from './components/side-drawer/side-drawer.component';
 import { RouterModule } from '@angular/router';
 import { CardModule } from './shared/modules/card/card.module';
+import { SmartChartsModule } from './shared/modules/charts/smart-charts.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { CardModule } from './shared/modules/card/card.module';
     LoaderModule,
     HttpClientModule,
     RouterModule,
-    CardModule
+    CardModule,
+    SmartChartsModule
   ],
   providers: [
     AuthGuard,

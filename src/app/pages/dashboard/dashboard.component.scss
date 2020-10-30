@@ -1,3 +1,4 @@
+@import "../../../assets/scss/variables";
 .dashboard {
   &-title {
     font-weight: bold;
@@ -11,23 +12,33 @@
   }
 
   .wrapper {
-    position: relative;
-    min-height: 144px;
-    .cards {
-      max-height: 144px;
-      overflow: hidden;
-      transition: all 1s;
+    &-cards {
+      position: relative;
+      min-height: 144px;
+      margin-bottom: calc(#{$gutter-space} * 3);
 
-      &.expand {
-        max-height: fit-content;
-        overflow: visible;
-      }
+      .cards {
+        max-height: 144px;
+        overflow: hidden;
+        transition: all 1s;
 
-      &-actions {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        &.expand {
+          max-height: fit-content;
+          overflow: visible;
+        }
+
+        &-actions {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
       }
+    }
+
+    &-charts {
+      position: relative;
+      min-height: 300px;
+      margin-bottom: calc(#{$gutter-space} * 2);
     }
   }
 }

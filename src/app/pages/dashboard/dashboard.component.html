@@ -8,7 +8,7 @@
 
     </div>
   </div>
-  <div class="wrapper">
+  <div class="wrapper-cards">
     <ng-container *ngIf="userList.length && !loading">
       <div class="row cards" [class.expand]="showMoreCards" *ngIf="userList.length">
         <div class="col-2 col-md-4 col-lg-3" *ngFor="let user of userList">
@@ -21,5 +21,8 @@
       </div>
     </ng-container>
     <app-loader [loading]="loading" size="small" position="absolute" backdropColor="#efefef"></app-loader>
+  </div>
+  <div class="wrapper-charts">
+    <app-chart title="User Posts Chart" [data]="chartData" type="bar" [labels]="chartLabels"></app-chart>
   </div>
 </div>

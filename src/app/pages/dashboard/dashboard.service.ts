@@ -12,4 +12,8 @@ export class DashboardService {
   getActiveUsers() {
     return this.http.get<any>(`${environment.mockApiBaseURL}/users`);
   }
+
+  getUserPosts() {
+    return this.http.get<any>(`${environment.mockApiBaseURL}/posts`);
+  }
 }

@@ -20,15 +20,17 @@
   .main-content {
     transition: margin-left .5s;
     margin-left: 250px;
-    min-height: $viewport-height;
-    overflow-y: auto;
-    overflow-x: hidden;
+    height: $viewport-height;
+    overflow: hidden;
     &.expand {
       margin-left: 0;
     }
 
     .page-content {
-        padding: $gutter-space;
+      padding: $gutter-space;
+      height: calc(#{$viewport-height} - #{$menu-height});
+      overflow-y: auto;
+      overflow-x: hidden;
     }
   }
 }
